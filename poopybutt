@@ -1,0 +1,313 @@
+/**
+ * @name negcontrasttest
+ * @author jackcook99
+ * @version Auto
+ * @description a dim low contrast them meant to be easy on the eyes
+**/
+/*im running a test*/
+@import url("https://cyb3ry4nd3r3.github.io/negcontrast/negfont/stylesheet.css");
+/* @import url("https://cyb3ry4nd3r3.github.io/negcontrast/tuckedservers.css"); *//*comment this out to disable sliding servers*/
+@import url("https://cyb3ry4nd3r3.github.io/negcontrast/longsettings.css");/*comment this out if you dont want long settings*/
+:root {
+	/*Primary*/
+	--lv1:   #000000;
+	--accent: #751270;
+	--hover: #5f0e4e;
+	--header-primary:#a9a9a9;
+	--bg: url('https://i.imgur.com/GdnbuVj.jpg');
+	--codeblock:rgba(15,15,15,0.1);
+	--tooltip-color:#f6f6f7;
+	--bg-opacity: 0.75;
+	--bg-fade: 80%;
+	--contrast:    .75;
+	--brightness:     .75;
+	--viewwidth: 240px;
+	--hiddenwidth: 10px;
+	/*Support for other themes*/
+	--mc: var(--accent);
+	--hc: var(--hover);
+	--main-color: var(--accent);
+	--hover-color: var(--hover);
+	--roundness: var(--user-roundness);
+	--lvl-bg-opacity:var(--bg-opacity);
+	--lvl-bg-fade:var(--bg-fade);
+	--online:var(--success);
+	--idle:var(--caution);
+	--dnd:var(--danger);
+	--offline:var(--unavailable);
+	--invisible:var(--invisible);
+	--streaming:var(--twitch-purple);
+
+	/*Discord Vars*/
+	--deprecated-store-bg: var(--lv1);
+	--background-primary: var(--lv1);
+	--background-secondary: var(--lv1);
+	--background-secondary-alt:var(--lv1);
+	--background-tertiary: var(--lv1);
+	--channeltextarea-background:var(--lv1);
+	--background-modifier-active:transparent;
+	--interactive-active: var(--channels-default);
+	/*Status*/
+	--success: #085827;
+	--caution: #8b7200;
+	--danger: #7a0606;
+	--unavailable: #33373b;
+	--invisible: #444a52;
+	--information:#325d8d;
+	--twitch-purple: rgb(58, 29, 100);
+	--spotify-green:rgb(16, 92, 42);
+	--xbox-green:#0a4609;
+	--netflix-red:#91090f;
+
+	/*Roundness*/
+	--user-roundness:0;
+	--guilds-roundness:0;
+
+	/*Fonts*/
+	--sizelg:1.25rem;
+	--size0: 1.15rem;
+	--size1: .925rem;
+	--size2: .8rem;
+	--size3: .75rem;
+	--size4: .7rem;
+	--size5: .5rem;
+	--size6: .35rem;
+	--letter-spacing: -.02rem;
+	font-size: 17px !important;
+	--theme-name:  'negcontrast';
+	--theme-version:    '1.2';
+	--font-display:Atkinson;
+	--font-primary:Atkinson;
+	/*Toasts*/
+	--toast-background:var(--lv1);
+/*experiment vars, probably wont do a whole lot, still probably shouldnt mess with them*/
+--brand-experiment-100: #f8f9fd !important;
+    --brand-experiment-130: #f2f4fc!important;
+    --brand-experiment-160: #faebf5!important;
+    --brand-experiment-200: #f8e3f3!important;
+    --brand-experiment-230: #f5daf1!important;
+    --brand-experiment-260: #f3d1eb!important;
+    --brand-experiment-300: #f0c7e9!important;
+    --brand-experiment-330: #ecb5e0!important;
+    --brand-experiment-360: #e7a5e4!important;
+    --brand-experiment-400: #e18ed3!important;
+    --brand-experiment-430: #df86d8!important;
+    --brand-experiment-460: #dd7dd0!important;
+    --brand-experiment: #da72d5!important;
+    --brand-experiment-500: #da72bb!important;
+    --brand-experiment-530: #c668b9!important;
+    --brand-experiment-560: #b15c9f!important;
+    --brand-experiment-600: #944e94!important;
+    --brand-experiment-630: #804373!important;
+    --brand-experiment-660: #703b6d!important;
+    --brand-experiment-700: #572e54!important;
+    --brand-experiment-730: #522b48!important;
+    --brand-experiment-760: #4b2746!important;
+    --brand-experiment-800: #412235!important;
+    --brand-experiment-830: #321a2a!important;
+    --brand-experiment-860: #21111d!important;
+    --brand-experiment-900: #06070b!important;
+    --brand-experiment-05a: rgba(114,137,218,0.05)!important;
+    --brand-experiment-10a: rgba(114,137,218,0.1)!important;
+    --brand-experiment-15a: rgba(114,137,218,0.15)!important;
+    --brand-experiment-20a: rgba(218, 114, 187, 0.2)!important;
+    --brand-experiment-25a: rgba(218, 114, 183, 0.25)!important;
+    --brand-experiment-30a: rgba(218, 114, 183, 0.3)!important;
+    --brand-experiment-35a: rgba(218, 114, 187, 0.35)!important;
+    --brand-experiment-40a: rgba(218, 114, 183, 0.4)!important;
+    --brand-experiment-45a: rgba(218, 114, 183, 0.45)!important;
+    --brand-experiment-50a: rgba(218, 114, 192, 0.5)!important;
+    --brand-experiment-55a: rgba(218, 114, 218, 0.55)!important;
+    --brand-experiment-60a: rgba(218, 114, 209, 0.6)!important;
+    --brand-experiment-65a: rgba(218, 114, 192, 0.65)!important;
+    --brand-experiment-70a: rgba(218, 114, 175, 0.7)!important;
+    --brand-experiment-75a: rgba(218, 114, 187, 0.75)!important;
+    --brand-experiment-80a: rgba(218, 114, 192, 0.8)!important;
+    --brand-experiment-85a: rgba(218, 114, 178, 0.85)!important;
+    --brand-experiment-90a: rgba(218, 114, 187, 0.9)!important;
+    --brand-experiment-95a: rgba(218, 114, 183, 0.95)!important;
+
+}
+
+
+
+	.content-yTz4x3 {
+		filter: contrast(var(--contrast)) brightness(var(--brightness));
+		background:transparent;
+	}
+	.markup-2BOw-j code {
+	    background: var(--codeblock);
+	}
+	.members-1998pB, .members-1998pB>div {
+	    background-color: transparent
+
+
+	}
+	.theme-dark .form-2fGMdU:before {
+	    background: transparent;
+	}
+	.input-2VB9rf{
+		background-color: var(--lv1);
+	}
+	.messagesWrapper-3lZDfY::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		opacity: var(--bg-opacity);
+		background-attachment:fixed;
+		background: var(--bg) center/cover no-repeat;
+		-webkit-mask-image: radial-gradient(black, transparent var(--bg-fade));
+	}
+	.theme-dark .form-2fGMdU:before, .chat-3bRxxu {
+	    background: transparent;
+	}
+	.sidebar-2K8pFh {
+	    background: transparent;
+	}
+	.theme-dark .form-2fGMdU:before, .chat-3bRxxu {
+	    background: transparent;
+	}
+	#app-mount:before {
+	  content: "";
+	  background: var(--bg);
+	  background-position: center;
+	  background-size: cover;
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  z-index: 0;
+		opacity: 0.5;
+	  /*background: var(--bg) center/cover no-repeat;*/
+	}
+	.scroller-2LSbBU {
+
+	    background: transparent;
+	}
+	.app-2rEoOp {
+
+	    background: transparent;
+
+	}
+	.bg-h5JY_x {
+	    background-color: var(--lv1);
+			opacity: var(--bg-opacity);
+	}
+	.wrapper-3NnKdC {
+	    background-color: var(--background-tertiary);
+			opacity: var(--bg-opacity);
+	}
+	.scroller-RmtA4e {
+	    z-index: 1;
+	    padding-right: 8px;
+			background-color: transparent;
+			opacity: var(--bg-opacity);
+	}
+.container-3w7J-x {
+	    position: relative;
+			opacity: var(--bg-opacity);
+	}
+	.scroller-1Bvpku {
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    padding: 12px 0 0;
+	    background-color: transparent;
+	    contain: layout size;
+	    filter: contrast(var(--contrast)) brightness(var(--brightness));
+	}
+.container-3baos1 {
+	filter: contrast(var(--contrast)) brightness(var(--brightness));
+}
+.tutorialcontainer-2sGCg9 childWrapper-anI2G9 {
+	background:transparent!important;
+	line-height:40px;
+	-webkit-mask: url("https://i.imgur.com/K8Ps3J7.png");
+	-webkit-mask-size: 40px;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	color:rgba(255,255,255) !important;
+}
+.homeIcon-FuNwkv path {display: none;}
+.homeIcon-FuNwkv{
+	background-image: url('https://i.imgur.com/K8Ps3J7.png');
+	background-color: transparent !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+
+}
+
+.wordmark-2iDDfm {
+	opacity: 1;
+	width: 100%;
+	background: var(--lv1);
+	padding: 0;
+	display: flex;
+	align-items: center;
+	height: 30px;
+	padding-left: 12px;
+}
+
+.wordmark-2iDDfm svg {
+	display: none;
+}
+
+.wordmark-2iDDfm:before,
+.wordmark-2iDDfm:after {
+  font-size:var(--size1);
+}
+
+.wordmark-2iDDfm:before {
+	content: var(--theme-name);
+	font-weight: 600;
+	color: var(--header-primary);
+
+}
+
+.wordmark-2iDDfm:after {
+	content: 'v' var(--theme-version);
+	font-weight: 400;
+	color: rgba(255, 255, 255, .8);
+	margin-left: 5px;
+}
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+    color: #fff;
+    background-color: rgba(5,5,5,1);
+}
+.peopleList-3c4jOR {
+    padding-bottom: 8px;
+    /* filter: contrast(var(--contrast)) brightness(var(--brightness)); */
+    background: var(--lv1);
+}
+
+.theme-dark .keyboardShortcutsModal-3piNz7 {
+    background-color: var(--lv1);
+	}
+	.inner-1ilYF7,.uploadModal-2ifh8j .inner-3nWsbo,.uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC  {
+		  background-color: var(--lv1);
+			/*filter: contrast(var(--contrast)) brightness(var(--brightness));*/
+	}
+
+.toasts-tApoHv.right-Eka_pI,.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K.expandable-3khGbD,.uploadModal-2ifh8j .inner-3nWsbo .comment-4IWttf .label-3aiqT2,.contents-18-Yxp,.checkboxWrapper-SkhIWG,.lookFilled-1Gx00P.colorBrand-3pXr91, .flowerStar-1GeTsn .name-1jkAdW, .tierTooltipTitle-3AtaZT,.toasts,.messagesPopoutWrap-1MQ1bW,.messagesPopoutWrap-1MQ1bW,.userPopout-3XzG_A,.mention-1f5kbO ,.content-2qfHzC,.theme-dark .ctaBar-2UsjF2,.progressBar-2Hd4f8,.headerGraphic-nVhv-X, .headerLogo--hLLAk,.headerBlurb-1GxBrq,.carouselContainerVisible-1JVIpW,.avatarUploaderInner-2EvNMg, .userSettingsSecurity-3IYeMF .isEnabled-24g9qA,.connectionIcon-2ElzVe,.lookFilled-1Gx00P.colorRed-1TFJan,.lookOutlined-3sRXeN.colorRed-1TFJan, .constrainedRow-2GB6Ki,.details-2fkb7l,.sidebar-CFHs9e,.peopleListItem-2nzedh,.children-19S4PO,.wrapper-2qzCYF.minimum-28Z35l,.title-29uC1r,.toolbar-1t6TWx,.wrapper-3EGhDO,.category-2sgp74,.emojiListRowMediumSize-M_K7-z,.textWrapper-2hGAqu,.categoryItemGuildCategory-3MisqI,.accountBtn-2Nozo3,.itemCard-v9viV7:first-of-type,.content-2c3hgM,.diversitySelector-1v4_1A,.bd-emote-item,.nav-7UD0KD,.categoryItemDefaultCategory-aBZ6nJ,.title-31JmR4, .input-rwLH4i.connectedAccounts-2-XP1G,.header-19cWci, .graphicPrimary-1I8l6r,.container-1giJp5,.horizontal-1ae9ci>.flex-1xMQg5:first-child, .horizontal-1ae9ci>.flexChild-faoVW3:first-child,.permissionCheckmark-1SeKr2,.modeDefault-3a2Ph1,.faded-3bns_w,.voiceCallWrapper-3kPwHm,.content-3YMskv,.title-29uC1r,.theme-dark .paymentPane-3bwJ6A,.theme-dark .bar-2Qqk5Z,.container-3PXSwK,.track-11EASc,.css-4h5swf-singleValue,.emptyStateHeader-248f_b,.emptyStateSubtext-2hdA9c, .guildIcon-c10VUR,.features-3EmM1p,.iconSizeLarge-161qtT,.circle-vWlbvd,.theme-dark .tierLabel-39IsmN, .defaultColor-1_ajX0,.h5-18_1nd,.emptyStateImage-2MrSNs ,.promotionIcon-3FDeSa, .gemWithLabel-2aecE_ ,.subscriptionInfo-14cju1,.heading-3VWlBM, .marketingLogo-1D8DV6,.base-1x0h_U.muted-3-7c5L,.size16-1P40sf,.marketingHeader-d16BX, .guildSubscriptionSlot-1XGRPI:last-child,.theme-dark .notDetected-33MY4s, .theme-light .notDetected-33MY4s,.theme-dark .nowPlayingAdd-1Kdmh_,.bd-addon-list .bd-footer,.container-1_ClKi,.contentColumnDefault-1VQkGM,.bd-addon-controls,.bd-addon-header .bd-icon,.bd-addon-list .bd-description, .bd-title, .bd-name, .bd-meta, .defaultColor-1_ajX0, .theme-light .nowPlayingAdd-1Kdmh_,  .toolbar-1t6TWx {
+    filter: contrast(var(--contrast)) brightness(var(--brightness));
+}
+.preview-2nSL_2{
+	  filter: contrast(var(--contrast)) brightness(var(--brightness));
+}
+.theme-dark .perksModal-fSYqOq,.background-1QDuV2,.preview-2nSL_2,.guildHeader-3nh5RK,.cardWrapper-2Min21,.theme-dark .paymentPane-3bwJ6A, .theme-dark .bottomDivider-1K9Gao,.defaultColor-1_ajX0,.theme-dark .gemIndicatorContainer-2jdECl,.guildSubscriptionSlots-JPXXvN,.cardPrimary-1Hv-to,.connectionHeader-2MDqhu,.connection-1fbD7X,.accountList-33MS45,.itemCard-v9viV7:first-of-type,.fieldList-21DyL8, .wrapper-2aW0bm,.lookFilled-1Gx00P.colorBrand-3pXr91, .accountBtn-2Nozo3 .accountBtnInner-sj5jLs{
+    background-color: transparent;
+}
+.textContainer-C0szpm {
+    background-color: var(--codeblock);
+}
+.footer-2yA7Ep {
+    background-color: var(--codeblock);
+}
